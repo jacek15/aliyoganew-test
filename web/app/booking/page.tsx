@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import YogoWidgetLoader from "@/components/YogoWidgetLoader";
 import { site } from "@/lib/site";
+import { div } from "framer-motion/m";
 
 export const metadata: Metadata = {
   title: "Book a Class",
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function BookingPage() {
   return (
     <>
+      <YogoWidgetLoader />
+
       <PageHero
         eyebrow="Book a Class"
         title={
@@ -22,7 +26,7 @@ export default function BookingPage() {
             starts <em className="italic text-[var(--accent)]">here.</em>
           </>
         }
-        sub="Book online in minutes through our YogoBooking platform — browse the schedule, choose your class, and confirm instantly."
+        sub="Book online in minutes through our Yogo Booking platform — browse the schedule, choose your class, and confirm instantly."
       />
 
       <section className="bg-[var(--bg)] py-[100px]">
@@ -62,17 +66,6 @@ export default function BookingPage() {
                 <p className="text-[14px] leading-[1.8] text-[var(--fg-mid)]">{s.d}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href={site.booking.book}
-              target="_blank"
-              rel="noopener"
-              className="inline-block bg-[var(--fg)] px-9 py-4 text-[11px] font-normal uppercase tracking-[0.11em] text-[var(--bg)] transition-colors hover:bg-[var(--accent)]"
-            >
-              Open Booking Platform →
-            </a>
           </div>
         </div>
       </section>
@@ -126,7 +119,7 @@ export default function BookingPage() {
               </h2>
             </div>
             <a
-              href={site.booking.book}
+              href={site.booking.timetable}
               target="_blank"
               rel="noopener"
               className="inline-block border-b border-[var(--fg-light)] pb-[1px] text-[12px] tracking-[0.07em] text-[var(--fg-mid)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
@@ -136,16 +129,11 @@ export default function BookingPage() {
           </div>
         </div>
 
-        <iframe
-          src={site.booking.book}
-          title="Ali Yoga Studio — YogoBooking schedule"
-          width="100%"
-          height="720"
-          loading="lazy"
-          className="block w-full border-0 border-t border-t-[color-mix(in_srgb,var(--fg)_8%,transparent)]"
-        />
+        <div className="px-8 md:px-20">
+          <div className="yogo-calendar w-full" />
+        </div>
+
       </section>
     </>
   );
 }
-

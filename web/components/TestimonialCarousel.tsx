@@ -41,9 +41,6 @@ export function TestimonialCarousel() {
   return (
     <section className="bg-[var(--bg-dark)] px-8 py-[100px] text-center md:px-20">
       <div className="mx-auto max-w-[980px]">
-        <span className="block font-[var(--font-neue-kabel)] text-[100px] leading-[0] text-[var(--accent)] opacity-35 relative top-12">
-          {`"`}
-        </span>
         <div className="mb-6 text-[14px] tracking-[3px] text-[var(--accent)]">★★★★★</div>
 
         <AnimatePresence mode="wait">
