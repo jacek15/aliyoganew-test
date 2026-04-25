@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="48" fill="#261a0e"/>
+  <circle cx="176" cy="88" r="56" fill="#c87044" opacity="0.9"/>
+  <path d="M56 172 C88 124 126 116 152 144 C176 170 198 186 220 182" fill="none" stroke="#faf7f2" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <text x="44" y="214" font-family="serif" font-size="34" fill="#faf7f2" font-style="italic">Ali</text>
+</svg>
+

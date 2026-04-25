@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f0e8"/>
+      <stop offset="1" stop-color="#ede6d5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#g)"/>
+  <circle cx="640" cy="360" r="210" fill="#e8c4a0" opacity="0.75"/>
+  <path d="M140 820 C240 620 380 540 520 560 C660 580 760 720 780 860" fill="none" stroke="#261a0e" stroke-width="10" opacity="0.18"/>
+  <text x="70" y="1030" font-family="serif" font-size="56" font-style="italic" fill="#261a0e" opacity="0.75">Hatha</text>
+</svg>
+

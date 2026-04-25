@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/rjmpro/Downloads/**)",
+      "Bash(unzip -l /Users/rjmpro/Downloads/Website-handoff.zip)",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -o /Users/rjmpro/Downloads/Website-handoff.zip -d website-handoff)"
+    ]
+  }
+}

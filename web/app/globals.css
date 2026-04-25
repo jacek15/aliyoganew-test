@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Brand tokens (ported from styles.css) */
+:root {
+  --bg: #f5f0e8;
+  --bg-alt: #ede6d5;
+  --bg-dark: #261a0e;
+  --fg: #261a0e;
+  --fg-mid: #6b4d2e;
+  --fg-light: #83694f;
+  --accent: #a45730;
+  --accent-lt: #e8c4a0;
+  --white: #faf7f2;
+  --nav-h: 72px;
+
+  /* ─── Type Scale ──────────────────────────────────────────────────────────
+   *
+   * Labels / Eyebrows (uppercase, wide tracking)
+   * --ts-label-xs   9px   — hero badge tight label
+   * --ts-label-sm  10px   — section eyebrows, contact labels, card tags
+   * --ts-label-md  11px   — primary nav-level labels, CTA button text
+   * --ts-label-lg  12px   — secondary CTAs / text-links
+   *
+   * Body / Prose
+   * --ts-body-sm   13px   — fine-print, small captions
+   * --ts-body-md   14px   — card body copy
+   * --ts-body-lg   15px   — default prose (mobile)
+   * --ts-body-xl   16px   — primary prose (desktop)
+   *
+   * UI / Component text
+   * --ts-ui-sm     18px   — address / contact values
+   * --ts-ui-md     20px   — small component headings
+   * --ts-ui-lg     22px   — medium component headings
+   * --ts-ui-xl     24px   — larger component headings
+   * --ts-ui-2xl    26px   — card class names
+   *
+   * Heading (fluid — uses clamp for smooth scaling)
+   * --ts-h4        clamp(20px, 2.5vw, 28px)
+   * --ts-h3        clamp(26px, 3.5vw, 44px)
+   * --ts-h2-sm     clamp(28px, 3vw,   40px)
+   * --ts-h2        clamp(34px, 4vw,   56px)
+   * --ts-h2-lg     clamp(36px, 4vw,   58px)
+   * --ts-h1-sm     clamp(42px, 5vw,   72px)
+   *
+   * Display (largest, hero-scale)
+   * --ts-display   clamp(54px, 6.5vw, 96px)
+   * --ts-stat      40px   — stat numbers (1st, 3 styles, 100%)
+   * --ts-jumbo     100px  — decorative oversized text
+   * ─────────────────────────────────────────────────────────────────────── */
+
+  /* Labels / Eyebrows */
+  --ts-label-xs: 9px;
+  --ts-label-sm: 10px;
+  --ts-label-md: 11px;
+  --ts-label-lg: 12px;
+
+  /* Body / Prose */
+  --ts-body-sm: 13px;
+  --ts-body-md: 14px;
+  --ts-body-lg: 15px;
+  --ts-body-xl: 16px;
+
+  /* UI / Component text */
+  --ts-ui-sm:  18px;
+  --ts-ui-md:  20px;
+  --ts-ui-lg:  22px;
+  --ts-ui-xl:  24px;
+  --ts-ui-2xl: 26px;
+
+  /* Headings (fluid) */
+  --ts-h4:    clamp(20px, 2.5vw, 28px);
+  --ts-h3:    clamp(26px, 3.5vw, 44px);
+  --ts-h2-sm: clamp(28px, 3vw, 40px);
+  --ts-h2:    clamp(34px, 4vw, 56px);
+  --ts-h2-lg: clamp(36px, 4vw, 58px);
+  --ts-h1-sm: clamp(42px, 5vw, 72px);
+
+  /* Display */
+  --ts-display: clamp(54px, 6.5vw, 96px);
+  --ts-stat:    40px;
+  --ts-jumbo:   100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-neue-kabel), system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(0); opacity: 1; }
+  75% { transform: translateY(8px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+/* Small helper utilities that are awkward in Tailwind */
+.nav-blur {
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 7%, transparent);
+}

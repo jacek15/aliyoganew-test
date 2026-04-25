@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ede6d5"/>
+      <stop offset="1" stop-color="#f5f0e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#g)"/>
+  <circle cx="450" cy="420" r="200" fill="#c87044" opacity="0.18"/>
+  <path d="M260 760 C320 640 390 600 450 600 C510 600 580 640 640 760" fill="none" stroke="#261a0e" stroke-width="12" opacity="0.18" stroke-linecap="round"/>
+  <text x="70" y="1030" font-family="serif" font-size="56" font-style="italic" fill="#261a0e" opacity="0.75">Alina</text>
+</svg>
+
